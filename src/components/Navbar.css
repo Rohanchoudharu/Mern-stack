@@ -2,6 +2,7 @@
   background-color: #181e29; 
   color: white;
   position: fixed;
+  top: 0%;
   width: 100%;
   z-index: 30;
   box-shadow: 0 1px 3px rgba(50, 35, 35, 0.1);
@@ -20,9 +21,9 @@
 .brand {
   font-size: 1.5rem; 
   font-weight: bold;
-  color: #667eea;
+  color: #f4f4f5;
   text-decoration: none;
-  margin: 90px;
+  text-align: left;
 }
 
 .nav {
