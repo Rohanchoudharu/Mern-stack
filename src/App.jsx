@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css'; // Updated CSS file with simplified classes
+import './App.css'; 
 import Navbar from './components/Navbar';
 
 const Home = () => (
@@ -7,7 +7,7 @@ const Home = () => (
     <div className="home-container">
       <div className="home-content">
         <h1 className="home-title">
-          Welcome to Dark Devil Team
+          GET A RIDE,LOW PRICE
         </h1>
         <p className="home-description">
         </p>
@@ -15,13 +15,13 @@ const Home = () => (
           href="#contact"
           className="home-button"
         >
-          Get in Touch
+          BOOK A RIDE
         </a>
       </div>
       <div className="home-image-container">
         <img
-          src="https://cdn.pixabay.com/photo/2025/06/09/16/27/animal-9650392_1280.jpg"
-          alt="The wolf in the forest"
+          src="https://cdn.pixabay.com/photo/2016/12/26/13/28/taxi-1932107_1280.jpg"
+          alt="The drive is safe"
           className="home-image"
           width={600}
           height={400}
@@ -30,6 +30,70 @@ const Home = () => (
     </div>
   </section>
 );
+
+const Services = () => (
+  <section className="services-section" id="services">
+    <h2 className="services-title">Our Services</h2>
+    <div className="services-list">
+      <div className="service-item">
+        <h3>Airport Transfers</h3>
+        <p>Reliable and comfortable rides to and from the airport.</p>
+        <img src="../component/airport.png" 
+        alt="" 
+        height={250}
+        width={250}
+        />
+      </div>
+      <div className="service-item">
+        <h3>City Tours</h3>
+        <p>Explore the city with our knowledgeable drivers.</p>
+        <img src="../component/city.png" alt="" 
+        height={150}
+        width={150}/>
+      </div>
+      <div className="service-item">
+        <h3>Corporate Travel</h3>
+        <p>Professional transportation for your business needs.</p>
+        <img src="../component/skyscraper.png" alt="" />
+      </div>
+    </div>
+  </section>
+);
+
+const About = () => (
+  <section className="about-section" id="about">
+    <h2 className="about-title">About Us</h2>
+    <div className="about-content">
+      <div className="about-image-container">
+        <img
+        src="https://cdn.pixabay.com/photo/2021/12/24/16/49/work-6891501_1280.jpg"
+        alt=" Our team"
+        className="about-image"
+        width={600}
+        height={400}
+        />
+        </div>
+        <div className="about-text">
+          <h4> SAFETY IS OUR TOP PRIORITY</h4>
+          {/* <p>The well being of our customer is greater then anything else</p> */}
+          </div>
+          </div>
+          </section>
+);
+ const Contact = () => (
+  <section className="contact-section" id="contact">
+   <h2 className="contact-title">Contact Us</h2>
+   <div className="contact-content">
+    <div className="contact-info">
+      <h3>Get in Touch</h3>
+      <p>Address: 123 Main St, Anytown, USA</p>
+      <p>Phone: 7845895658</p>
+      <p>Email: [paradoy@yahoo.com](mailto:paradoy@yahoo.com)</p>
+      </div>
+    </div>
+  </section>
+  );
+
 
 const LoginModal = ({ isOpen, onClose }) => {
   const [email, setEmail] = React.useState('');
@@ -102,6 +166,9 @@ const App = () => {
       <Navbar onLoginClick={openLogin} />
       <main className="main-content">
         <Home />
+        <Services />
+        <About />
+        <Contact />
       </main>
       <LoginModal isOpen={loginOpen} onClose={closeLogin} />
     </>
@@ -109,3 +176,4 @@ const App = () => {
 };
 
 export default App;
+
