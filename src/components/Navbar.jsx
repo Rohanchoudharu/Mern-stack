@@ -10,16 +10,16 @@ const Navbar = ({ onLoginClick }) => {
 
   const handleLinkClick = () => {
     if (mobileMenuOpen) setMobileMenuOpen(false);
-  };
+  };  
 
   return (
     <header className="header">
       <div className="container">
         <a href="#home" className="brand">
-          NewBrand
+          PARADOY
         </a>
         <nav className="nav">
-          {[ 'Home', ' About', 'Services', 'Portfolio', 'Blog', 'Contact'].map((item) => (
+          {[ '  ' ,'  ','  ' ,'  ','  ' ,'  ', 'Home', ' About', 'Services', 'Contact'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -51,7 +51,7 @@ const Navbar = ({ onLoginClick }) => {
       {mobileMenuOpen && (
         <div className="mobile-menu">
           <nav>
-            {['Home', 'About', 'Services', 'Portfolio', 'Blog', 'Contact'].map((item) => (
+            {['Home', 'About', 'Services', 'Contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
